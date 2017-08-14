@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+  <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Taxi Booking-Admin</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="./xhr.js"></script>
+    <script type="text/javascript" src="./adminAjax.js"></script>
+  </head> 
+  <body width="800">
+	<table width="100%" class="tBody" border="1">
+		<tr>
+			<td>
+			<center><H1>Taxi Booking Admin Page</H1></center>
+				<form>
+				<table width="750" class="tBody">
+					<tr>
+						<td><Strong>&nbsp;Search Booking requests :</Strong></td>
+						<td><select name="sBookingList" style="width: 320px;">
+							<option disabled>Select Booking Request</option>
+							<option disabled>------------------------------------------------------</option>
+							<option value="unassigned" selected>Unassigned Taxi requests (within 2 hours ONLY)</option>
+							<option value="assigned">Assigned Taxi Bookings</option>
+						</select></td>
+						<td>&nbsp;&nbsp;&nbsp;<input type="button" value="Search Requests" onclick="searchBookingList('showBookingList', sBookingList.value)" class="myButton"/></td>
+					</tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr>
+						<td><Strong>&nbsp;Assign a Booking Request :</Strong></td>
+						<td><input type="text" name="bReference" size="40" placeholder="Enter the Reference Number ex) 'abd12345'" maxlength="8" autofocus></td>
+						<td>&nbsp;&nbsp;&nbsp;<input type="button" value="Assign a Request" onclick="assignBooking('showRequestResult', bReference.value)" class="myButton"/></td>
+					</tr>
+				</table>
+				<table width="100%">
+					<tr>
+						<td align="center">
+						<input type="button" value="Taxi Booking Page" class="myButton" onclick="window.location.href='./booking.htm'">
+						</td>
+					</tr>
+				</table>
+				</form>
+				<table width="750" class="tBody">
+					<tr>
+						<td>
+							<span id="showRequestResult"><h3>The Taxi booking request will display here.</h3></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span id="showBookingList"><h3>The Taxi booking list will display here.</h3></span>
+						</td>
+					</tr>
+				</table>
+		</td>
+	</tr>
+</table>
+ </body> 
+</HTML>

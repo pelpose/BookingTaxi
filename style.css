@@ -1,0 +1,139 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body  {
+	font-family: "Times New Roman", Times, serif;
+	background-image: url("background_img.jpg");
+	background-color: #cccccc;
+    background-repeat:   no-repeat;
+    background-position: center center;
+	width: auto;
+	height: auto;
+}
+
+h1 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #2E86C1;
+	margin-bottom: 2ex;
+	text-align: center;
+}
+
+h2 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #2E86C1;
+	margin-bottom: 2ex;
+	text-align: center;
+}
+
+h3 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #2E86C1;
+	margin-bottom: 2ex;
+	text-align: center;
+}
+	
+h4 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #2E86C1;
+	margin-bottom: 2ex;
+	text-align: center;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.tIntro {
+	border: 1px solid powderblue;
+	background-color: #F2F3F4;
+	color: #333333;
+	font-family: Century Gothic, sans-serif;
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.tBody {
+	border: 1px solid powderblue;
+	background-color: #F2F3F4;
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.tTitle {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.linkTo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.tAbout {
+	border: 1px solid powderblue;
+	background-color: #DCEDC8;
+	display: table-cell;
+    vertical-align: middle;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:	;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.verticalLine {
+  border-left: thick solid #ff0000;
+}
+
+
+	

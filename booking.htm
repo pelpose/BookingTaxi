@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+  <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Taxi Booking</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="./xhr.js"></script>
+    <script type="text/javascript" src="./bookingAjax.js"></script>
+  </head> 
+  <body width="800" onload="getCurrentTime();">
+	<table width="100%" class="tBody" border="1">
+		<tr>
+			<td>
+			<center><H1>Taxi Booking Page</H1></center>
+				<form>
+				<table width="750" class="tBody">
+					<tr>
+						<td colspan="2" align="center"><Strong>Customer Name </Strong><font color="red">*</font> </td>
+						<td><input type="text" name="nameField" placeholder="Enter your name" maxlength="25" size="40" onblur="checkValue(nameField.value, 'chkCustName')" autofocus></td>
+						<td><span id="chkCustName"></span></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><Strong>Contact Phone </Strong><font color="red">*</font> </td>
+						<td><input type="text" name="phoneField" placeholder="Please enter numbers ONLY (Without '-' )." maxlength="12" size="40" onblur="checkValue(phoneField.value, 'chkPhone')"></td>
+						<td><span id="chkPhone"></span></td>
+					</tr>
+					<tr frame="below">
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td rowspan="4"><Strong>Pick-Up</Strong></td>
+						<td>&nbsp;&nbsp;|&nbsp;Unit </td>
+						<td><input type="text" name="pUnitField" maxlength="5" size="10"><br></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;|&nbsp;Street No. <font color="red">*</font> </td>
+						<td><input type="text" name="pStNumField" maxlength="5" size="10" onblur="checkValue(pStNumField.value, 'chkPickStNo')"></td>
+						<td><span id="chkPickStNo"></span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;|&nbsp;Street Name <font color="red">*</font> </td>
+						<td><input type="text" name="pStNameField" maxlength="20" size="30" onblur="checkValue(pStNameField.value, 'chkPickStName')"></td>
+						<td><span id="chkPickStName"></span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;|&nbsp;Suburb <font color="red">*</font> </td>
+						<td><input type="text" name="pSuburbField" maxlength="20" size="30" onblur="checkValue(pSuburbField.value, 'chkPickSuburb')"></td>
+						<td><span id="chkPickSuburb"></span></td>
+					</tr>
+					<tr>
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td rowspan="4"><Strong>Destination</Strong></td>
+						<td>&nbsp;&nbsp;|&nbsp;Unit </td>
+						<td><input type="text" name="dUnitField" maxlength="5" size="10"></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;|&nbsp;Street No. <font color="red">*</font> </td>
+						<td><input type="text" name="dStNumField" maxlength="5" size="10" onblur="checkValue(dStNumField.value, 'chkDestStNo')"></td>
+						<td><span id="chkDestStNo"></span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;|&nbsp;Street Name <font color="red">*</font> </td>
+						<td><input type="text" name="dStNameField" maxlength="20" size="30" onblur="checkValue(dStNameField.value, 'chkDestStName')"></td>
+						<td><span id="chkDestStName"></span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;|&nbsp;Suburb <font color="red">*</font> </td>
+						<td><input type="text" name="dSuburbField" maxlength="20" size="30" onblur="checkValue(dSuburbField.value, 'chkDestSuburb')"></td>
+						<td><span id="chkDestSuburb"></span></td>
+					</tr>
+					<tr>
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><Strong>Pick-Up Date/Time</Strong> <font color="red">*</font></td>
+						<td><input type="datetime-local" name="pickUpDateTime" id="gDateTime" size="25" onblur="checkValue(pickUpDateTime.value, 'chkBookingTime')"><br></td>
+						<td><span id="chkBookingTime"></span></td>
+					</tr>					
+				</table>
+				<table width="100%">
+					<tr>
+						<td align="center">
+						<input type="button" value="Admin Page" class="myButton" onclick="window.location.href='./admin.htm'">&nbsp;&nbsp;
+						<input type = "button" onClick = "makeBookingTaxi('bookingStatus', nameField.value, phoneField.value, pUnitField.value, pStNumField.value, pStNameField.value, pSuburbField.value, dUnitField.value, dStNumField.value, dStNameField.value, dSuburbField.value, pickUpDateTime.value)" value="Booking Taxi" class="myButton">&nbsp;&nbsp;
+						<input type="reset" value="Reset Booking" onclick="clearDataCheck()" class="myButton">
+						</td>
+						<td align="right" width="15%"><font color="red">* Required</font></td>
+					</tr>
+				</table>
+				</form>
+			<span id="bookingStatus"><h3>The Taxi booking status will display here.</h3></span>
+		</td>
+	</tr>
+</table>
+ </body> 
+</HTML>
